@@ -1,1 +1,24 @@
 <p>login works!</p>
+<h3 fxLayoutAlign="center center" class="loginWords">Login User</h3>
+<div style="width: 100%" fxLayout="column" fxLayoutAlign="center center" class="login">
+  <div [hidden]="!failed" class="alert alert-danger">
+      <h4>Unsuccessful Login! Please Try Again.</h4>
+  </div>
+  <form [hidden]="failed" (ngSubmit)="onSubmit()" fxLayout="column" fxLayoutAlign="center center">
+    <div class="form-group">
+      <label for="userId">UserID:</label>
+      <input type="text" class="form-control" id="userId" required [(ngModel)]="user.uName" name="userId">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" required [(ngModel)]="user.pass" name="password">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+
+  <a class="hyper" [routerLink]="['/forgotPass']" routerLinkActive="router-link-active" > Forgot Password? </a>
+
+</div>
+
