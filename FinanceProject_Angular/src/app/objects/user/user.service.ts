@@ -18,4 +18,8 @@ export class UserService {
   createUser(user: object): Observable<object> {
     return this.http.post(`${this.baseUrl}/createUser`, user);
   }
+
+  getUsers(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/listUsers`);
+  }
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LoginGuardService } from '../authoguards/login/login-guard.service';
+import { LoginGuardService } from '../../authoguards/login/login-guard.service';
 import { Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
 @Injectable({

@@ -1,0 +1,23 @@
+<mat-nav-list>
+  <a mat-list-item routerLink="/home" (click)="onSidenavClose();">
+    <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
+  </a>
+  <mat-list-item *ngIf="isAdmin" [matMenuTriggerFor]="menu">
+    <mat-icon>unfold_more</mat-icon>
+    <a>Admin Access</a>
+  </mat-list-item>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="users">Manage Users</button>
+    <button mat-menu-item [matMenuTriggerFor]="receipts">Manage Receipts</button>
+  </mat-menu>
+
+  <mat-menu #users="matMenu">
+    <button mat-menu-item (click)="onSidenavClose();" [routerLink]="['']" routerLinkActive="router-link-active" >View Users</button>
+    <button mat-menu-item (click)="onSidenavClose();" [routerLink]="['']" routerLinkActive="router-link-active" >Register New User</button>
+  </mat-menu>
+
+  <mat-menu #receipts="matMenu">
+    <button mat-menu-item (click)="onSidenavClose();" [routerLink]="['']" routerLinkActive="router-link-active" >View Inventory</button>
+    <button mat-menu-item (click)="onSidenavClose();" [routerLink]="['']" routerLinkActive="router-link-active" >Add New Book</button>
+  </mat-menu>
+</mat-nav-list>

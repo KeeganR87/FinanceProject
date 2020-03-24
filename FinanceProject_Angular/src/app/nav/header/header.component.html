@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="onToggleSidenav();" *ngIf="LoggedIn">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <span>Library</span>
+
+    <span class="filler"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" *ngIf="LoggedIn">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" >
+      <button mat-menu-item [routerLink]="['/profile']" routerLinkActive="router-link-active">
+        <mat-icon>person</mat-icon>
+        Profile
+      </button>
+      <button mat-menu-item (click)="Logout();">
+        <mat-icon>power_settings_new</mat-icon>
+        Logout
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
