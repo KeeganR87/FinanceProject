@@ -11,8 +11,8 @@ export class BlankComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    if (this.router.url === '/home/loggingIn') {
-      this.router.navigateByUrl('/blank', { skipLocationChange: true }).then(() => {
+    if (this.router.url === '/blank/loggingIn') {
+      this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() => {
         this.router.navigate(['/home']);
       });
     }

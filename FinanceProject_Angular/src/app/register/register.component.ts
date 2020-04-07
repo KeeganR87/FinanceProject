@@ -43,7 +43,7 @@ export class RegisterComponent implements OnInit {
     _id: {
 
     },
-    userId: {
+    uName: {
       required: 'UserId required.',
       matchFound: 'UserId already in use.'
     },
@@ -53,7 +53,7 @@ export class RegisterComponent implements OnInit {
     lName: {
       required: 'Last Name required.'
     },
-    password: {
+    pass: {
       required: 'Password required.',
       pattern: 'Password must have 1 lowercase, 1 uppercase, 1 number and 1 special character'
     }
@@ -78,10 +78,10 @@ export class RegisterComponent implements OnInit {
     console.log(this.list);
     return this.formBuilder.group({
       _id: [''],
-      userId: ['', [Validators.required, /*VerifyUserId(this.list)*/]],
+      uName: ['', [Validators.required, /*VerifyUserId(this.list)*/]],
       fName: ['', Validators.required],
       lName: ['', Validators.required],
-      password: ['', [Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{5,}')]]
+      pass: ['', [Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{5,}')]]
     });
   }
 
@@ -116,7 +116,7 @@ export class RegisterComponent implements OnInit {
       uName: f.uName,
       fName: f.fName,
       lName: f.lName,
-      pass: f.password,
+      pass: f.pass,
     };
     return saveUser;
   }

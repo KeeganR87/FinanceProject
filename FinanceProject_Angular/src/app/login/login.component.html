@@ -5,13 +5,13 @@
   </div>
   <form [hidden]="failed" (ngSubmit)="onSubmit()" fxLayout="column" fxLayoutAlign="center center">
     <div class="form-group">
-      <label for="userId">UserID:</label>
-      <input type="text" class="form-control" id="userId" required [(ngModel)]="user.uName" name="userId">
+      <label for="uName">UserID:</label>
+      <input type="text" class="form-control" id="uName" required [(ngModel)]="user.uName" name="uName">
     </div>
 
     <div class="form-group">
       <label for="password">Password:</label>
-      <input type="password" class="form-control" id="password" required [(ngModel)]="user.pass" name="password">
+      <input type="password" class="form-control" id="password" required [(ngModel)]="user.pass" name="pass">
     </div>
 
     <button type="submit" class="btn btn-success">Submit</button>
