@@ -13,6 +13,8 @@ import { HeaderComponent } from './nav/header/header.component';
 import { SidebarComponent } from './nav/sidebar/sidebar.component';
 import { LayoutComponent } from './layout/layout.component';
 import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
+import { BlankComponent } from './blank/blank.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { RegisterComponent } from './register/register.component';
     HeaderComponent,
     SidebarComponent,
     LayoutComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent,
+    BlankComponent
   ],
   imports: [
     BrowserModule,
