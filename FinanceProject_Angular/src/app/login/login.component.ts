@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
           this.dataUser = data as User;
           sessionStorage.setItem('Username', this.dataUser.uName);
           sessionStorage.setItem('role', 'Admin');
-          this.router.navigate(['/blank/loggingIn']);
+          this.router.navigate(['/home']);
           this.invalidLogin = false;
         }
         this.returned();

@@ -15,6 +15,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { BlankComponent } from './blank/blank.component';
+import { LogReceiptComponent } from './log-receipt/log-receipt.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BlankComponent } from './blank/blank.component';
     LayoutComponent,
     RegisterComponent,
     HomeComponent,
-    BlankComponent
+    BlankComponent,
+    LogReceiptComponent
   ],
   imports: [
     BrowserModule,
